@@ -16,7 +16,6 @@ public class Application {
 //	public CommandLineRunner ejecutarAlInicio() {
 //		return args -> {
 //			System.out.println("Ejecutando lógica de inicialización...");
-//			// Aquí puedes hacer inserciones en la base de datos, etc.
 //		};
 //	}
 

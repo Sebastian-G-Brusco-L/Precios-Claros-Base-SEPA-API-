@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import org.springframework.data.domain.Pageable;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<Producto, ProductoId> {
