@@ -18,9 +18,6 @@ public class ProductoService {
         this.productoRepository = productoRepository;
     }
 
-
-    // crud
-
     public Page<Producto> findByIdProducto(Pageable pageable, Long idProducto) {
         return productoRepository.findById_IdProducto(pageable, idProducto);
     }

@@ -15,22 +15,19 @@ public class ProductoController {
 
     private final ProductoService productoService;
 
-    //TODO:
-    // paginacion a id comercio y id bandera
-
 
     public ProductoController(ProductoService productoService) {
         this.productoService = productoService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idProducto}")
     public ResponseEntity<Page<Producto>> findByIdProducto(
-            @PathVariable Long id,
+            @PathVariable Long idProducto,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size
     ) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<Producto> productos = productoService.findByIdProducto(pageable, id);
+        Page<Producto> productos = productoService.findByIdProducto(pageable, idProducto);
         return ResponseEntity.ok(productos);
     }
 
